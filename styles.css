@@ -1,0 +1,112 @@
+body {
+    max-width: 100%;
+}
+
+/* Header */
+header {
+    background-color: beige;
+}
+header ul {
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+header ul li {
+    list-style-type: none;
+    font-size: 30px;
+}
+
+
+/* Main */
+
+#backpic {
+    width: 80%;
+    height: 40em;
+}
+
+main section img {
+    max-width: 100%;
+}
+
+main section div {
+    display: flex;
+    justify-content: center;
+}
+
+#intro {
+
+    width: 100%;
+    height: 40em;
+    transition: opacity .5s ease-in;
+}
+
+.in {
+    position: absolute;    
+    color: white;
+    background:black;
+    font-size: 50px;
+
+    margin-top: 200px;
+
+    border-color: white;
+    border-width: 5px;
+    border-style: solid;
+}
+
+.sec {
+    position: relative;
+}
+
+
+/* Damn */
+
+.reveal {
+  /*position: relative;*/
+  opacity: 0;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+.active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+  animation: fade-left 1s ease-in;
+}
+.active.fade-right {
+  animation: fade-right 1s ease-in;
+}
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
